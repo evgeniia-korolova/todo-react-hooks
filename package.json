@@ -1,6 +1,7 @@
 {
   "name": "todo-react-hooks",
   "version": "0.1.0",
+  "homepage": "https://evgeniia-korolova.github.io/todo-react-hooks",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
