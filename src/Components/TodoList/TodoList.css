@@ -1,0 +1,77 @@
+.ListContainer {
+    border: 2px solid rgb(128, 202, 235);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.TodoList {
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-between;
+    font-size: 24px;
+    padding: 10px;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.TodoList:hover {
+    background: rgb(223, 244, 253);
+}
+
+.buttons-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.edit-btn, .save-btn {
+    background: rgb(128, 202, 235);
+    border: 1px solid rgb(128, 202, 235);
+    border-radius: 5px;
+    padding: 0 20px;
+}
+
+.save-btn {
+    margin-right: 40px;
+}
+
+.taskBlock {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    align-items: center;
+}
+
+.task {   
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;   
+}
+
+.date {
+    font-size: 16px;
+}
+
+.completed-task {
+    text-decoration: line-through;    
+}
+
+.priority {
+    align-self: flex-start;
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-start;
+    width: 33%;    
+}
+
+.delete-all-btn {
+     background: rgb(128, 202, 235);
+    border: 1px solid rgb(128, 202, 235);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.edit-input {
+  max-width: 500px;
+}
+
