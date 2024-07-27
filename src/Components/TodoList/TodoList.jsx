@@ -1,4 +1,5 @@
 import { useState } from "react";
+import icon from '../../assets/icon-bin.png'
 
 
 import './TodoList.css';
@@ -64,7 +65,8 @@ const TodoList = ({ todos, setTodos }) => {
         setTodos(completedTodos)
     }
     const uncompletedTasksHandler = () => {
-        let uncompletedTodos = [...todos].filter(item => !item.completed);
+        // let uncompletedTodos = [...todos].filter(item => !item.completed);
+        let uncompletedTodos = JSON.parse(localStorage.getItem('todos')).filter(item => !item.completed);
         setTodos(uncompletedTodos)
     }
 
@@ -110,10 +112,9 @@ const TodoList = ({ todos, setTodos }) => {
                         </div >
                             : <div className="taskBlock">
                                 <div className="date">{item.createDate }</div>
-                                <div className={item.completed ? 'task completed-task' : 'task'}>  {item.title} </div>
+                                <div className={item.completed ? 'task completed-task' : 'task'}>  {item.title}  </div>
                                 <div className="priority">Priority :{item.priority }</div>
-                            </div>
-                             
+                            </div>                    
                         
                     }
                     {
@@ -128,7 +129,7 @@ const TodoList = ({ todos, setTodos }) => {
                                     className="edit-btn"
                                     onClick={() => editTodo(item.id, item.title)} >Edit</button>
                                 <div onClick={() => deleteTodo(item.id)}>
-                                    <img src="./icon-bin.png" alt="delete" />
+                                    <img src={icon} alt="delete" />
                                 </div>
                             </div>
                     }             
